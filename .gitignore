@@ -16,6 +16,10 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# Downloaded Cursor agent skills (local tooling, not the site)
+.cursor/skills/
+skills/
 .DS_Store
 *.suo
 *.ntvs*

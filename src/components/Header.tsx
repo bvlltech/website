@@ -10,25 +10,28 @@ import BluesLogo from "./BluesLogo"
 
 const navLinkSx = {
   position: "relative",
-  display: "inline-block",
+  display: "inline-flex",
+  alignItems: "center",
+  minHeight: 44,
   color: colors.white,
-  fontSize: 16,
-  fontWeight: 600,
+  fontFamily: '"Big Shoulders Display", sans-serif',
+  fontSize: 20,
+  fontWeight: 700,
+  letterSpacing: "0.08em",
+  textTransform: "uppercase",
   textDecoration: "none",
   px: 1.5,
-  py: 1,
   "&::after": {
     content: '""',
     position: "absolute",
     left: 12,
     right: 12,
-    bottom: 4,
-    height: 3,
-    borderRadius: 1,
-    bgcolor: colors.white,
+    bottom: 8,
+    height: 2,
+    bgcolor: colors.clay,
     transform: "scaleX(0)",
     transformOrigin: "left center",
-    transition: "transform 0.28s ease-out",
+    transition: "transform 0.22s ease-out",
   },
   "&:hover::after": {
     transform: "scaleX(1)",
@@ -44,8 +47,9 @@ function Header() {
       position="static"
       elevation={0}
       sx={{
-        bgcolor: colors.dark,
+        bgcolor: colors.navy,
         color: colors.white,
+        borderBottom: `3px solid ${colors.clay}`,
       }}
     >
       <Toolbar
@@ -55,7 +59,7 @@ function Header() {
           gap: { xs: 1, md: 2 },
           px: { xs: 2, md: 3 },
           py: { xs: 1.5, md: 1.25 },
-          minHeight: { xs: "auto", md: 96 },
+          minHeight: { xs: "auto", md: 88 },
         }}
       >
         <Link
@@ -66,7 +70,6 @@ function Header() {
           sx={{
             display: "inline-flex",
             alignItems: "center",
-            gap: { xs: 1.25, md: 2 },
             color: colors.white,
             flexShrink: 0,
             minWidth: 0,
@@ -79,7 +82,7 @@ function Header() {
           component="nav"
           direction="row"
           aria-label="Primary"
-          spacing={1}
+          spacing={0.5}
           sx={{
             ml: { xs: 0, md: "auto" },
             width: { xs: "100%", md: "auto" },
@@ -89,8 +92,11 @@ function Header() {
           <Link component={NavLink} to="/" end sx={navLinkSx}>
             Home
           </Link>
-          <Link component={NavLink} to="/teams" sx={navLinkSx}>
-            Teams
+          <Link component={NavLink} to="/season" end={false} sx={navLinkSx}>
+            Season
+          </Link>
+          <Link component={NavLink} to="/contact" sx={navLinkSx}>
+            Contact
           </Link>
         </Stack>
 
@@ -103,32 +109,17 @@ function Header() {
         >
           <Button
             type="button"
-            variant="outlined"
+            variant="contained"
             fullWidth
             sx={{
-              borderWidth: 2,
-              borderColor: colors.white,
-              borderRadius: "8px",
-              bgcolor: colors.white,
-              color: colors.dark,
-              fontSize: 15,
-              fontWeight: 700,
-              letterSpacing: "0.06em",
-              py: 1,
-              px: 2,
-              transition:
-                "transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease",
+              bgcolor: colors.clay,
+              color: colors.white,
+              borderRadius: "2px",
+              boxShadow: "none",
+              px: 2.5,
               "&:hover": {
-                bgcolor: "transparent",
-                color: colors.white,
-                borderColor: colors.white,
-                borderWidth: 2,
-                transform: "translateY(-2px)",
-                boxShadow: "0 8px 20px rgb(0 0 0 / 35%)",
-              },
-              "&:active": {
-                transform: "translateY(0)",
-                boxShadow: "0 4px 10px rgb(0 0 0 / 25%)",
+                bgcolor: colors.orange,
+                boxShadow: "none",
               },
               "@media (min-width: 900px)": {
                 width: "auto",

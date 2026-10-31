@@ -6,8 +6,39 @@
 
 #root {
   min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  min-height: calc(100svh - 96px);
+  flex: 1;
+}
+
+::selection {
+  background: #c45c26;
+  color: #ffffff;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 2000;
+  padding: 8px 14px;
+  background: #002359;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible {
+  outline: 2px solid #c45c26;
+  outline-offset: 3px;
 }

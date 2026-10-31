@@ -10,10 +10,13 @@ export const colors = {
   red: "#a9000d",
   blue: "#008cd1",
   orange: "#db6c1e",
-  ink: "#4c4c4c",
-  gray: "#7d7d7d",
+  clay: "#c45c26",
+  sand: "#f0c4a0",
+  cream: "#f3eee4",
+  ink: "#3d3a36",
+  gray: "#6e6a64",
   white: "#ffffff",
-  page: "#eaeaea",
+  page: "#f3eee4",
   dark: "#002359",
 } as const
 
