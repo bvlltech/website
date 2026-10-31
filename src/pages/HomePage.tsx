@@ -180,28 +180,6 @@ function HomePage() {
         </Box>
       </Box>
 
-      <Box sx={{ bgcolor: colors.navy, color: colors.white, py: 2 }}>
-        <Container maxWidth="lg">
-          <Stack
-            direction={{ xs: "column", sm: "row" }}
-            spacing={{ xs: 1, sm: 4 }}
-            sx={{
-              fontFamily: '"Big Shoulders Display", sans-serif',
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              fontSize: "1.05rem",
-            }}
-          >
-            <Box>T-ball through seniors</Box>
-            <Box sx={{ color: colors.clay }}>·</Box>
-            <Box>Volunteer-run</Box>
-            <Box sx={{ color: colors.clay }}>·</Box>
-            <Box>2027 season</Box>
-          </Stack>
-        </Container>
-      </Box>
-
       <Box sx={{ bgcolor: colors.cream, py: { xs: 6, md: 8 } }}>
         <Container maxWidth="lg">
           <Grid container spacing={{ xs: 4, md: 6 }} sx={{ alignItems: "center" }}>

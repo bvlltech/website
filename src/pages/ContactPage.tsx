@@ -80,8 +80,7 @@ function ContactPage() {
         </Typography>
         <Typography sx={{ color: colors.ink, mb: 4, maxWidth: 640, fontSize: "1.08rem" }}>
           Questions about fees, registration, or volunteering can go to the league
-          treasurer. Send a message below (opens your email app) or use TeamLinkt
-          if you already have a league account.
+          treasurer. Send a message below and it will open your email app.
         </Typography>
 
         <Box
@@ -183,17 +182,6 @@ function ContactPage() {
             Email directly:{" "}
             <Link href={`mailto:${contact.email}`} sx={{ color: colors.navy, fontWeight: 700 }}>
               {contact.email}
-            </Link>
-          </Typography>
-          <Typography sx={{ color: colors.ink }}>
-            TeamLinkt league contact:{" "}
-            <Link
-              href={contact.teamlinkt}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{ color: colors.navy, fontWeight: 700 }}
-            >
-              Contact us on TeamLinkt
             </Link>
           </Typography>
           <Typography sx={{ color: colors.ink }}>
